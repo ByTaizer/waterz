@@ -6,10 +6,7 @@ import os
 import builtins
 
 
-try:
-    from Cython.Build import cythonize
-except ImportError:
-    sys.exit("Cython is required to build this package but is not installed.")
+
 
 VERSION = '0.9.6'
 
