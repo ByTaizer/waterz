@@ -1,9 +1,15 @@
 from setuptools import setup, find_packages
 from setuptools.extension import Extension
 from setuptools.command.build_ext import build_ext as _build_ext
-from Cython.Build import cythonize
+
 import os
 import builtins
+
+
+try:
+    from Cython.Build import cythonize
+except ImportError:
+    sys.exit("Cython is required to build this package but is not installed.")
 
 VERSION = '0.9.6'
 
