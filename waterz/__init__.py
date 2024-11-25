@@ -163,7 +163,7 @@ def agglomerate(
 
     key = scoring_function, discretize_queue, source_files_hashes, sys.version_info, sys.executable, Cython.__version__
     module_name = 'waterz_' + hashlib.md5(str(key).encode('utf-8')).hexdigest()
-    lib_dir=os.path.expanduser('~/.cython/inline')
+    lib_dir='.cython/inline'
 
     # since this could be called concurrently, there is no good way to check
     # whether the directory already exists
