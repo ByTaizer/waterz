@@ -170,7 +170,6 @@ def agglomerate(
     try:
         os.makedirs(lib_dir)
     except:
-        print("c'est ça")
         pass
 
     # make sure the same module is not build concurrently
